@@ -28,13 +28,16 @@ $(TARGET): $(OBJECTS)
 .PHONY: all
 all: $(TARGET)
 
+.PHONY: clean
 clean:
 	rm -rf $(ODIR)
 	rm $(TARGET)
 
+.PHONY: install
 install: all
 	install $(TARGET) $(PREFIX)/bin/
 
+.PHONY: uninstall
 uninstall:
 	rm -f $(PREFIX)/bin
 
