@@ -35,7 +35,7 @@ clean:
 
 .PHONY: install
 install: all
-	install $(TARGET) $(PREFIX)/bin/
+	install -m 6755 -o root -g root $(TARGET) $(PREFIX)/bin/
 
 .PHONY: uninstall
 uninstall:
